@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Style Guide | CSS Zen Garden</title>
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@800&family=Ubuntu:wght@300&family=Wix+Madefor+Display&display=swap');      
+    @media (max-width: 768px) {
+        section.section {
+            grid-template-areas: 
+            "theme"
+            "colors"
+            "typo"
+            "elements"
+            "wireframe";
+            grid-template-columns: 1fr;
+        }
+
+        #theme, #colors, #typo, #elements {
+            text-align: center !important;
+        }
+    }  
+
+    html {
+        font-family: "Wix Madefor Display", sans-serif;
+        background-color: #555658;
+      }
+
+      h1 {
+        text-align: center;
+        margin-bottom: 50px;
+        color: #fff;
+      }
+
+      h2 {
+        margin: 0 0 10px 0;
+      }
+
+      p {
+        margin: 10px 0 5px 0;
+      }
+
+      .section {
+        display: grid;
+        grid-template-areas:
+          "theme theme"
+          "colors typo"
+          "elements elements"
+          "wireframe wireframe";
+        grid-gap: 20px;
+        grid-template-columns: 1fr 1fr;
+        margin: 0 auto;
+        max-width: 800px;
+        background-color: white;
+        border-radius: 10px;
+        padding: 10px 30px;
+
+      }
+
+      .container {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        justify-content: center;
+      }
+
+      #theme {
+        grid-area: theme;
+        text-align: center;
+      }
+
+      #colors {
+        grid-area: colors;
+        text-align: left;
+      }
+
+      #typo {
+        grid-area: typo;
+        text-align: right;
+      }
+
+      #elements {
+        grid-area: elements;
+        text-align: center;
+      }
+
+      #wireframe {
+        text-align: center;
+        grid-area: wireframe;
+      }
+
+      #images img {
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Style Guide by Jorge Flores</h1>
+      <section class="section">
+        <div id="theme" class="container">
+          <h2>Flashcard Theme</h2>
+          <p>
+            Each title with its content will be position into a flashcard. When the user scrolls, the content of the flashcard will change.
+            The links to different projects will be set on a vertical bar on the left, and the rest of the links will be fixed on the right.
+          </p>
+        </div>
+        <div id="colors" class="container">
+          <h2>Colors</h2>
+          <!-- Coolors Palette Widget -->
+          <script src="https://coolors.co/palette-widget/widget.js"></script>
+          <script data-id="0813153958301237">
+            new CoolorsPaletteWidget("0813153958301237", [
+              "24617f",
+              "54a7cf",
+              "dac9ad",
+              "555658",
+              "ffffff",
+            ]);
+          </script>
+        </div>
+        <div id="typo" class="container" style="display: flex">
+          <div>
+            <h3 style="
+            font-family: 'Syne', sans-serif;">Headings: Syne</h3>
+            <h4 font-family: 'Syne', sans-serif;>ABCDEFGHIJKLMNOPQRSTUVWXYZ
+                abcdefghijklmnopqrstuvwxyz
+                1234567890</h4>
+          </div>
+          <div>
+            <h3 style="font-family: 'Ubuntu', sans-serif;">Body: Ubuntu</h3>
+            <p style="font-family: 'Ubuntu', sans-serif;">ABCDEFGHIJKLMNOPQRSTUVWXYZ
+                abcdefghijklmnopqrstuvwxyz
+                1234567890</p>
+        </div>
+        </div>
+        <div id="elements" class="container">
+          <h2>Elements</h2>
+        </div>
+        <div id="wireframe" class="container">
+            <h2>Wireframe</h2>
+            <div id="images">
+                <img id="large" src="./Wireframes/largeview.png">
+                <img id="small" src="./Wireframes/smallview.png">
+            </div>
+          </div>
+      </section>
+    </main>
+  </body>
+</html>
