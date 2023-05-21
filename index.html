@@ -6,24 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Style Guide | CSS Zen Garden</title>
     <style>
-@import url('https://fonts.googleapis.com/css2?family=Syne:wght@800&family=Ubuntu:wght@300&family=Wix+Madefor+Display&display=swap');      
-    @media (max-width: 768px) {
+      @import url("https://fonts.googleapis.com/css2?family=Syne:wght@800&family=Ubuntu:wght@300&family=Wix+Madefor+Display&display=swap");
+      @media (max-width: 768px) {
         section.section {
-            grid-template-areas: 
+          grid-template-areas:
             "theme"
             "colors"
             "typo"
             "elements"
             "wireframe";
-            grid-template-columns: 1fr;
+          grid-template-columns: 1fr;
         }
 
-        #theme, #colors, #typo, #elements {
-            text-align: center !important;
+        #theme,
+        #colors,
+        #typo,
+        #elements {
+          text-align: center !important;
         }
-    }  
+      }
 
-    html {
+      html {
         font-family: "Wix Madefor Display", sans-serif;
         background-color: #555658;
       }
@@ -56,7 +59,6 @@
         background-color: white;
         border-radius: 10px;
         padding: 10px 30px;
-
       }
 
       .container {
@@ -94,6 +96,12 @@
       #images img {
         width: 100%;
       }
+
+      #p p:hover {
+        /* text-decoration: underline #54A7CF; */
+        font-size: 20px;
+        transition: 200ms;
+      }
     </style>
   </head>
   <body>
@@ -103,8 +111,10 @@
         <div id="theme" class="container">
           <h2>Flashcard Theme</h2>
           <p>
-            Each title with its content will be position into a flashcard. When the user scrolls, the content of the flashcard will change.
-            The links to different projects will be set on a vertical bar on the left, and the rest of the links will be fixed on the right.
+            Each title with its content will be position into a flashcard. When
+            the user scrolls, the content of the flashcard will change. The
+            links to different projects will be set on a vertical bar on the
+            left, and the rest of the links will be fixed on the right.
           </p>
         </div>
         <div id="colors" class="container">
@@ -123,29 +133,44 @@
         </div>
         <div id="typo" class="container" style="display: flex">
           <div>
-            <h3 style="
-            font-family: 'Syne', sans-serif;">Headings: Syne</h3>
-            <h4 font-family: 'Syne', sans-serif;>ABCDEFGHIJKLMNOPQRSTUVWXYZ
-                abcdefghijklmnopqrstuvwxyz
-                1234567890</h4>
+            <h3 style="font-family: 'Syne', sans-serif">Headings: Syne</h3>
+            <h4 style="font-family: 'Syne', sans-serif">
+              ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz 1234567890
+            </h4>
           </div>
           <div>
-            <h3 style="font-family: 'Ubuntu', sans-serif;">Body: Ubuntu</h3>
-            <p style="font-family: 'Ubuntu', sans-serif;">ABCDEFGHIJKLMNOPQRSTUVWXYZ
-                abcdefghijklmnopqrstuvwxyz
-                1234567890</p>
-        </div>
+            <h3 style="font-family: 'Ubuntu', sans-serif">Body: Ubuntu</h3>
+            <p style="font-family: 'Ubuntu', sans-serif">
+              ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz 1234567890
+            </p>
+          </div>
         </div>
         <div id="elements" class="container">
           <h2>Elements</h2>
+          <div class="two-column" id="h1">
+            <h3>h1</h3>
+            <h1 style="background-color: #555658; color: white; margin-bottom: 10px; font-family: 'Syne', sans-serif;">Headline 1</h1>
+          </div>
+          <div class="two-column" id="h2">
+            <h3>h2</h3>
+            <h2 style="background-color: #DAC9AD; color: black; margin-bottom: 10px; font-family: 'Ubuntu', sans-serif; font-size: 50px;">Headline 2</h1>
+          </div>
+          <div class="two-column" id="h3">
+            <h3>P normal</h3>
+            <p style="color: black; margin-bottom: 10px; font-family: 'Ubuntu', sans-serif;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h1>
+          </div>
+          <div class="two-column" id="p">
+            <h3>Links to Other Projects</h3>
+            <p style="color: #24617F; margin-bottom: 10px; font-family: 'Syne', sans-serif;">Link 1 Link 2</h1>
+          </div>
         </div>
         <div id="wireframe" class="container">
-            <h2>Wireframe</h2>
-            <div id="images">
-                <img id="large" src="./Wireframes/largeview.png">
-                <img id="small" src="./Wireframes/smallview.png">
-            </div>
+          <h2>Wireframe</h2>
+          <div id="images">
+            <img id="large" src="./Wireframes/largeview.png" />
+            <img id="small" src="./Wireframes/smallview.png" />
           </div>
+        </div>
       </section>
     </main>
   </body>
